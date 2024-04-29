@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, #000000 40%,#000000d5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    z-index: -1;
+    clip-path: circle(40% at right 70%);
+
+}
+.container{
+    width: 80%;
+    height: 80%;
+    background-color: rgba(255, 254, 254, 0.186);
+    color: white;
+    text-align: center;
+    margin: 100px 0;
+    overflow: hidden;
+    
+}
+nav{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0px;
+    color: white;
+
+
+}
+nav .logo{
+    font-size: xx-large;
+    margin: 0px 20px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: white;
+    
+}
+nav ul a li{
+    color: white;
+    font-size: large;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin: 0 15px;
+}
+nav ul a li:hover{
+    color: red;
+}
+nav .logo:hover{
+    color: red;
+}
+.content{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.content .img{
+    width: 40%;
+    height: auto;
+}
+.content .text{
+    width: 40%;
+}
+.content .text h1{
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.content .text p{
+    line-height: 25px;
+    letter-spacing: 1px;
+    margin: 10px;
+}
+.content .img{
+    width: 40%;
+
+}
+.content .img img{
+    width: 400px;
+}
+
+@media (max-width:950px) {
+    .content,nav{
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .content .img, .content .text{
+        width: 80%;
+    } 
+    .content .img img{
+
+            width: 200px;
+            margin: auto;
+    
+    }
+    body::after{
+        clip-path: circle(50% at bottom);
+    }
+}
+@media (max-width: 500px){
+.content .text p{
+    letter-spacing: normal;
+    font-size: 10px;
+    font-weight: 100;
+
+}
+.content .text .h{
+    font-size: large;
+
+}
+.text{
+
+    margin-top: 10px;
+    
+}
+.img{ 
+    margin-bottom: 40px;
+    nav{
+    margin: auto;
+    margin-top: 50px;
+    }
+}
+}
